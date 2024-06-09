@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/src/output.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container mr-auto ml-auto">
+      <h1 class="text-center text-8xl">Products</h1>
+
+      <ul class="flex flex-wrap gap-8 justify-center">
+        <template>
+          <div class="card w-96 rounded-md bg-base-100 shadow-xl mx-4">
+            <figure>
+              <img
+                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                alt="Shoes"
+              />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Shoes!</h2>
+              <div class="card-actions items-center justify-end">
+                <a class="" href="">read more</a>
+                <button class="btn btn-primary">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </template>
+      </ul>
+    </div>
+    <script src="/app.js"></script>
+  </body>
+</html>
