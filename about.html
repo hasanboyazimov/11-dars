@@ -8,25 +8,26 @@
     <link rel="stylesheet" href="/style.css">
   </head>
   <body class="relative">
-    <div class="container flex justify-center mr-auto ml-auto items-center">
-      <div class="card w-[500px] bg-base-100 shadow-xl">
-        <figure class="px-10 pt-10">
-          <img src="" alt="Product Image" class="rounded-xl" />
-        </figure>
-        <div class="card-body items-center text-center">
-          <h2 class="text-4xl" id="title">Product</h2>
-          <p class="description"></p>
-          <h4 id="price"></h4>
-          <div class="card-actions">
-            <button class="btn btn-primary">Buy Now</button>
+   
+      <div class="container flex justify-center min-h-lvh mr-auto ml-auto items-center">
+        <div class="card w-[800px] bg-base-100 shadow-xl">
+          <figure class="px-10 pt-10">
+            <img src="" alt="Product Image" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="text-4xl" id="title"></h2>
+            <p class="description"></p>
+            <h4 id="price"></h4>
+            <div class="card-actions">
+              <button class="btn btn-primary">Buy Now</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+  
 
-    <div class="loader w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-        <span class="loading loading-ring loading-lg"></span>
-      </div>
+    <div class="loader w-full bg-black bg-opacity-20  flex justify-center items-center min-h-lvh">
+      <span class="loading loading-loading w-[90px] "></span>
     <script type="module" src="/about.js"></script>
   </body>
 </html>

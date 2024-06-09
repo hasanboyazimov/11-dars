@@ -1,5 +1,4 @@
-import { loading } from "./loading.js";
-
+import { getData } from "./request.js";
 const queryString = window.location.search;
 const query = new URLSearchParams(queryString);
 const id = query.get("productID");
@@ -17,21 +16,7 @@ const updateUI = (product) => {
   description.textContent = product.description;
 };
 
-const getData = async (url) => {
-  try {
-    loading(true);
-    const request = await fetch(url);
-    if (!request.ok) {
-      throw new Error("Something went wrong :(");
-    }
-    const responce = await request.json();
-    loading(false);
-    return responce;
-  } catch (error) {
-    loading(false);
-    return error.message;
-  }
-};
+
 
 getData(API + `/${id}`)
   .then((data) => updateUI(data))
