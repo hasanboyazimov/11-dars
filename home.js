@@ -15,9 +15,11 @@ const updateUI = (products) => {
       console.log(product);
       const clonePopular = tempPopular.content.cloneNode(true);
       const a = clonePopular.querySelector(".read-more");
+      const imgLink = clonePopular.querySelector(".img-link");
       const popularTitle = clonePopular.querySelector(".popular-title");
       const popularImg = clonePopular.querySelector(".popular-img");
       a.href = `/about.html?productID=${product.id}`;
+      imgLink.href = `/about.html?productID=${product.id}`;
       popularTitle.textContent = product.title;
       popularImg.src = product.thumbnail;
       mostPopularList.appendChild(clonePopular);
@@ -31,9 +33,11 @@ const updateUI = (products) => {
     .forEach((product) => {
       const cloneDiscount = tempDiscount.content.cloneNode(true);
       const a = cloneDiscount.querySelector(".read-more");
+      const imgLink = cloneDiscount.querySelector(".img-link");
       const discountTitle = cloneDiscount.querySelector(".discount-title");
       const discountImg = cloneDiscount.querySelector(".discount-img");
       a.href = `/about.html?productID=${product.id}`;
+      imgLink.href = `/about.html?productID=${product.id}`;
       discountTitle.textContent = product.title;
       discountImg.src = product.thumbnail;
       discountList.appendChild(cloneDiscount);
