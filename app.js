@@ -1,13 +1,13 @@
-import {getData} from "./request.js"
+import { getData } from "./request.js";
 
 const API = "https://dummyjson.com/products";
 const temp = document.querySelector("template");
-const ul = document.querySelector("ul");
+const ul = document.querySelector("#ul");
 
 const updateUI = (products) => {
   ul.innerHTML = "";
   products.forEach((product) => {
-    console.log(product);
+    // console.log(product);
     const clone = temp.content.cloneNode(true);
 
     const cardTitle = clone.querySelector(".card-title");
@@ -22,7 +22,6 @@ const updateUI = (products) => {
     ul.appendChild(clone);
   });
 };
-
 
 getData(API)
   .then((data) => updateUI(data.products))

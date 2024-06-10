@@ -8,9 +8,103 @@
     <link rel="stylesheet" href="/style.css" />
   </head>
   <body class="relative">
-    <div class="loader w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-        <span class="loading loading-ring loading-lg"></span>
+    <div class="container  px-10 py-5 mx-auto">
+      <div class="navbar bg-base-100">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li><a href="/index.html">All Products</a></li>
+              <li><a href="/home.html"> Most Popular</a></li>
+              <li><a href="/home.html">On Sale</a></li>
+            </ul>
+          </div>
+          <a class="btn btn-ghost text-xl"
+            >Sifatli <span class="text-sky-500">Shop</span></a
+          >
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li><a href="/index.html">All Products</a></li>
+            <li><a href="/home.html"> Most Popular</a></li>
+            <li><a href="/home.html">On Sale</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <a class="btn">Cart</a>
+        </div>
       </div>
-    <script src="/home.js"></script>
+      <h1
+        class="text-4xl w-full rounded-full text-center pt-2 pb-2 bg-gray-100 mt-10 mb-10"
+      >
+        Most Popular
+      </h1>
+      <ul class="most-popular-list flex">
+        <template id="most-popular-tempate">
+          <div class="card w-96 rounded-md bg-base-100 shadow-xl mx-4">
+            <figure>
+              <a class="img-link hover:transform-cpu" href="">
+                <img class="popular-img" src="" alt="Product Images" />
+              </a>
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title popular-title"></h2>
+              <div class="card-actions items-center justify-end">
+                <a class="read-more" href="">read more</a>
+                <button class="btn btn-primary">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </template>
+      </ul>
+      <h1
+        class="text-4xl w-full rounded-full text-center pt-2 pb-2 bg-gray-100 mt-10 mb-10"
+      >
+        On Sale
+      </h1>
+
+      <ul class="discount-list flex">
+        <template id="discount-template">
+          <div class="card w-96 rounded-md bg-base-100 shadow-xl mx-4">
+            <figure>
+              <a class="img-link hover:transform-cpu" href="">
+                <img class="discount-img" src="" alt="Product Images" />
+              </a>
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title discount-title"></h2>
+              <div class="card-actions items-center justify-end">
+                <a class="read-more" href="">read more</a>
+                <button class="btn btn-primary">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </template>
+      </ul>
+      <div
+        class="loader w-full bg-black bg-opacity-20 flex justify-center items-center min-h-lvh"
+      >
+        <span class="loading loading-loading w-[90px]"></span>
+      </div>
+    </div>
+    <script type="module" src="/home.js"></script>
   </body>
 </html>
